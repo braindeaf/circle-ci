@@ -1,7 +1,7 @@
 development:
   clients: &development_clients
     default:
-      database: sard_development
+      database: development
       hosts:
         - localhost:27017
   sessions:
@@ -10,7 +10,7 @@ development:
 test:
   clients: &test_clients
     default:
-      database: sard_test<%= ENV['TEST_ENV_NUMBER'] %>
+      database: test<%= ENV['TEST_ENV_NUMBER'] %>
       hosts:
         - localhost:27017
   sessions:
