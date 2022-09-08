@@ -100,18 +100,20 @@ group :development do
   gem 'capistrano-resque', '~> 0.2.2', require: false
   gem 'capistrano-yarn', '2.0.2', require: false
   gem 'letter_opener', '1.7.0'
-  gem 'rubocop', '1.17.0', require: false
-  gem 'rubocop-rails', '~> 2.10.1'
-  gem 'rubocop-rspec', '~> 2.4.0'
   gem 'shog', '~> 0.2.1'
   gem 'versionator', '0.1.0'
 end
 
 group :development, :test do
+  gem 'brakeman'
+  gem 'bundler-audit', '~> 0.9.1'
   gem 'guard-rspec', '4.7.3'
   gem 'haml_lint', '0.37.0', require: false
   gem 'parallel_tests', '~> 3.7.1' # 3.8.1 drops 2.6 support
   gem 'pry', '~> 0.14.1'
+  gem 'rubocop', '1.17.0', require: false
+  gem 'rubocop-rails', '~> 2.10.1'
+  gem 'rubocop-rspec', '~> 2.4.0'
 end
 
 group :test do
