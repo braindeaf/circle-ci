@@ -33,6 +33,7 @@ jobs:
           - 27017:27017
     env:
       RAILS_ENV: test
+      MONGODB_URI: mongodb://test:password@localhost:27017/
 
     steps:
       - name: Checkout code
