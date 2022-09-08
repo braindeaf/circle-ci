@@ -14,12 +14,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     services:
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
       mongodb:
-        image: mongo
+        image: mongo:5.0.7
         env:
           MONGO_INITDB_ROOT_USERNAME: test
           MONGO_INITDB_ROOT_PASSWORD: password
-          MONGO_INITDB_DATABASE: ci_test
+          MONGO_INITDB_DATABASE: test
         options: >-
           --health-cmd mongo
           --health-interval 10s
